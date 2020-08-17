@@ -35,6 +35,13 @@ jobs:
     - name: Build App
       run: msbuild BankAccount.sln /p:Configuration=Release
     
+    # Run Tests
+    - name: Set up-VSTest
+      uses: Malcolminicon/Setup-VSTest@v2
+    
+    - name: Run VSTest
+      run: vstest.console BankAccountTests\bin\Debug\BankAccountTests.dll
+    
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:

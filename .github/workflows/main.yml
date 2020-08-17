@@ -37,7 +37,7 @@ jobs:
     
     # Run Tests
     - name: Set up-VSTest
-      uses: Malcolminicon/Setup-VSTest@v2
+      uses: Malcolmnixon/Setup-VSTest@v2
     
     - name: Run VSTest
       run: vstest.console BankAccountTests\bin\Debug\BankAccountTests.dll
